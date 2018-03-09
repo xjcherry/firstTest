@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			.div1{
+				width: 90vw;
+				height: 200px;
+				margin: 50px auto;
+				background-color: orange;
+				min-width: 500px;
+				max-width: 1000px;
+			}
+			/*响应式布局：根据屏幕不同尺寸响应不同CSS样式布局，且在规定尺寸中运用一套CSS样式*/
+			/*浏览器屏幕尺寸大于1000px时，运用该套css样式*/
+			@media only screen and (min-width:1000px ) {
+				.div1{
+					background-color: brown;
+				}
+			}
+			/*浏览器屏幕尺寸大于500px，小于等于1000px时，运用该套css样式*/
+			@media only screen and (min-width:500px )and (max-width:1000px ) {
+				.div1{
+					background-color: red;
+				} 
+			}
+			/*浏览器屏幕尺寸小于等于1000px时，运用该套css样式*/
+			@media only screen and (max-width: 500px) {
+				.div1{
+					background-color: yellow;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1"></div>
+	</body>
+</html>

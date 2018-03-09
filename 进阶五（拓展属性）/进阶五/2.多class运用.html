@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 150px;
+				height: 150px;
+				margin: 50px auto;
+				background-color: yellow;
+			}
+			.one{
+				background-color: red;
+			}
+			/*body>div:nth-child(2){
+				background-color: orange;
+			}*/
+			/*two和three均是一个元素的class，优先级一样*/
+			/*样式取决于代码执行的顺序*/
+			.two{
+				background-color: orange;
+			}
+			.three{
+				background-color: pink;
+			}
+			/*对于自身样式规定优先级最高*/
+			.two.three{
+				background-color: palegreen;
+			}
+			#s{
+				background-color: orchid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="one"></div>
+		<div id="s" class="two three"></div>
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			textarea:nth-child(1){
+				/*只可横向拉伸*/
+				resize: horizontal;
+			}
+			textarea:nth-child(2){
+				/*只可以纵向拉伸*/
+				resize: vertical;
+			}
+			
+			textarea:nth-child(3){
+				/*可以横纵拉伸*/
+				resize: both;
+			}
+			textarea:nth-child(4){
+				max-width: 500px;
+				max-height: 500px;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				resize: both;
+				overflow: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--文本域-->
+		<textarea></textarea>
+		<textarea></textarea>
+		<textarea></textarea>
+		<textarea></textarea>
+		<div></div>
+	</body>
+
+</html>

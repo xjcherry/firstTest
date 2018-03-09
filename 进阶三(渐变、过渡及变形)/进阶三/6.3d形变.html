@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.ele1,.ele2,.ele3,.ele4{
+				width: 200px;
+				height: 200px;
+				margin: 50px auto;
+				background-color: orange;
+				text-align: center;
+				font:bolder 30px/200px "微软雅黑";	
+				/*设置过渡相关属性*/
+				/*transition:transform 3.5s ease 0.2s;*/
+				transition:3.5s;
+				
+			}
+			.ele1:hover{
+				transform: rotate(3600deg);
+			}
+			.ele2:hover{
+				transform: rotateY(3600deg);
+			}
+			/*设置景深*/
+			.eye{
+				perspective: 800px;
+			}
+			.stage{
+				/*搭建舞台：允许子元素进行3d形变*/
+				transform-style: preserve-3d;
+				transform: rotateY(45deg);
+			}
+			.ele3:hover{
+				transform: rotateZ(3600deg);
+				
+			}
+			.stage:hover .ele4{
+				transform: translateZ(-500px);
+			}
+			</style>
+	</head>
+
+	<body>
+		<div class="ele1">X轴旋转</div>
+		<div class="ele2">Y轴旋转</div>
+		<div class="eye">
+			<div class="stage">
+				<div class="ele3">Z轴旋转</div>
+				<div class="ele4">Z轴位移</div>
+			</div>
+		</div>
+	</body>
+
+</html>

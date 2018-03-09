@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				-webkit-perspective: 3000px;
+				margin: 280px;
+			}
+			.stage{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -100px;
+				
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				
+				-webkit-transition: 10s;
+				/*transform:rotateY(88deg);*/
+				
+			}
+			
+			.stage div{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: center;
+				font: bolder 30px/200px "微软雅黑";
+			}
+			.ele1{
+				-webkit-transform: rotateY(0) translateZ(500px);
+				background-color: yellowgreen;
+			}
+			.ele2{
+				-webkit-transform: rotateY(30deg) translateZ(500px);
+				background-color: brown;
+			}
+			.ele3{
+				-webkit-transform: rotateY(60deg) translateZ(500px);
+				background-color: gold;
+			}
+			.ele4{
+				-webkit-transform: rotateY(90deg) translateZ(500px);
+				background-color: blueviolet;
+			}
+			.ele5{
+				-webkit-transform: rotateY(120deg) translateZ(500px);
+				background-color: green;
+			}
+			.ele6{
+				-webkit-transform: rotateY(150deg) translateZ(500px);
+				background-color: blue;
+			}
+			.ele7{
+				-webkit-transform: rotateY(180deg) translateZ(500px);
+				background-color: orange;
+			}
+			.ele8{
+				-webkit-transform: rotateY(210deg) translateZ(500px);
+				background-color: orchid;
+			}
+			.ele9{
+				-webkit-transform: rotateY(240deg) translateZ(500px);
+				background-color: paleturquoise;
+			}
+			.ele10{
+				-webkit-transform: rotateY(270deg) translateZ(500px);
+				background-color: papayawhip;
+			}
+			.ele11{
+				-webkit-transform: rotateY(300deg) translateZ(500px);
+				background-color: plum;
+			}
+			.ele12{
+				-webkit-transform: rotateY(330deg) translateZ(500px);
+				background-color: purple;
+			}
+			.stage:hover{
+				-webkit-transform:rotateY(720deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="stage">
+			<div class="ele1">1</div>
+			<div class="ele2">2</div>
+			<div class="ele3">3</div>
+			<div class="ele4">4</div>
+			<div class="ele5">5</div>
+			<div class="ele6">6</div>
+			<div class="ele7">7</div>
+			<div class="ele8">8</div>
+			<div class="ele9">9</div>
+			<div class="ele10">10</div>
+			<div class="ele11">11</div>
+			<div class="ele12">12</div>
+		</div>
+	</body>
+
+</html>

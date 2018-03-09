@@ -1,0 +1,18 @@
+.div2{
+	margin: 24px auto;
+	text-align: center;
+}
+.div2>img{
+	width: 60px;
+	margin-right: 10px;
+}
+@media only screen and (min-width: 990px) and (max-width: 1215px) {
+	.div2>img{
+		width: 5%;
+	}
+}
+@media only screen and (max-width: 990px) {
+	.div2>img{
+		width: 38px;
+	}
+}

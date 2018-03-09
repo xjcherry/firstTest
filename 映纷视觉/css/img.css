@@ -1,0 +1,19 @@
+.datu{		
+	width: 1200px;
+	margin-top: 130px;
+}
+@media only screen and (min-width: 820px) and (max-width: 1200px) {
+	.datu{		
+	width: 75%;
+	}
+}
+@media only screen and (min-width: 640px) and (max-width: 820px) {
+	.datu{
+		width: 640px;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.datu{
+		width: 97%;
+	}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				background-color: green;
+				
+				animation:  4 3s DouDou  alternate-reverse ;
+			}
+			@-webkit-keyframes DouDou{
+				33.33%{
+					margin-left: 800px;
+					margin-top: 0px;
+					background-color: red;
+					opacity: 0;
+				}
+				85%{
+					margin-left: 400px;
+					margin-top: 400px;
+					background-color: yellow;
+					
+				}
+				100%{
+					margin-left: 0px;
+					margin-top: 0px;
+					background-color: grey;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div></div>
+	</body>
+
+</html>

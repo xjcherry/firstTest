@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 300px;
+				background-color: cyan;
+				margin: 50px auto;
+				text-align: center;
+				font:bolder 30px/300px "微软雅黑";	
+			}
+			/*双色渐变：默认自上而下，且各占50%，从最上纯红渐变最下纯黄*/
+			div:nth-child(1){
+				background:linear-gradient(red,yellow) ;
+				/*background-image:-webkit-linear-gradient(red,yellow) ;*/
+			}
+			/*渐变属性是为background-image提供的，类似于背景图片，但采用的是渲染加载*/
+			/*渲染加载需要内存的支持以及消耗大量的CPU功效，不提倡随意滥用渐变背景*/
+			/*多色渐变：和双色渐变类似，各部分平分整个区域*/
+			/*webkit找到webkit其他就不找了*/
+			div:nth-child(2){
+				background-image: linear-gradient(green,cyan,yellow);
+				background-image: -webkit-linear-gradient(green,cyan,yellow);
+				background-image: -moz-linear-gradient(green,cyan,yellow);
+				background-image: -o-linear-gradient(green,cyan,yellow);
+				background-image: -ms-linear-gradient(green,cyan,yellow);
+			}
+			/*颜色+百分比：30%以上是纯红，70%以下是纯黄，30%~70%之间渐变，且平分中间渐变区域*/
+			div:nth-child(3){
+				background-image: linear-gradient(red 30%,yellow 70%);
+			}
+			/*方位+颜色:四个单方位+颜色，颜色部分遵循之前只有颜色时的所有标准*/
+			div:nth-child(4){
+				background-image:linear-gradient(top,black,white);
+				background-image:-webkit-linear-gradient(bottom,red,yellow);	
+			}
+			div:nth-child(5){
+				background-image: -webkit-linear-gradient(right,red 49%,yellow 51%);
+			}
+			/*复合方位：四个角，角度是45%或135%*/
+			div:nth-child(6){
+				background-image: -webkit-linear-gradient(left top,red,yellow);
+			}
+			/**/
+			div:nth-child(7){
+				background-image: -webkit-linear-gradient(45deg,red,yellow);
+			}
+			div:nth-child(8){
+				background-image: linear-gradient(to top right,red,yellow);
+				background-image: -webkit-linear-gradient(to top right,red,yellow);
+			}
+			/*重复渐变的次数是 100% 除以 最后颜色后的百分比（第一个颜色不能设置百分比）*/
+			div:nth-child(9){
+				background-image: repeating-linear-gradient(red,green 3%,yellow 20%);
+				background-image: -webkit-repeating-linear-gradient(red,green 3%,yellow 20%);
+			}
+			div:nth-child(10){
+				background-image: linear-gradient(left bottom,red,yellow);
+				background-image: -webkit-repeating-linear-gradient(left bottom,red,yellow);
+				background-size: 150px 150px;
+				background-repeat: all;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>双色</div>
+		<div>多色</div>
+		<div>颜色+百分比</div>
+		<div>下至上</div>
+		<div>斜角渐变</div>
+		<div>角度渐变</div>
+		<div>到达方位</div>
+		<div>重复渐变</div>
+		<div>重复渐变本质</div>
+		<div></div>
+		
+	</body>
+
+</html>

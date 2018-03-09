@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 50px;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				border: 1px solid black;
+			}
+			div{
+				/*格式：水平偏移量 垂直偏移量 模糊度 阴影尺寸 颜色 内外阴影*/
+				/*box-shadow: 0px 300px 10px 5px red ;*/
+				/*box-shadow:0 0 30px red inset;*/
+				/*多套阴影用逗号隔开*/
+				box-shadow:10px 0px 10px red,-10px 0px 10px green,0px -10px 10px blue,0px 10px 10px yellow;		
+			}
+			span{
+				font-size: 30px;
+				color: gold;
+				text-shadow: 0px 0px  30px red;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<span>又翻过了几座山</span>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<style type="text/css">
+			/*网格系统架构分三层 container row col-xs-n*/
+			/*在最外层设置架构的总宽度，已经宏观位置*/
+			/*在最内层进行高度以及更复杂的子元素布局（最内层作为布局载体）*/
+			.container{
+				width: 99vw;
+				height: 100vh;
+				margin: 0 auto;
+			}
+			.row{
+				/*width: 100%;*/
+				/*height: 200px;*/
+			}
+			.row>div{
+				height: 400px;
+				
+			}
+			/*.row>div:nth-child(1),.row>div:nth-child(2){
+				border-right: 10px solid white;
+			}*/
+			/*row>div{
+				transform: scale(0.9);
+			}*/
+			/*用padding控制网格元素之间的间距效果*/
+			.row>div{
+				background-clip: content-box;
+				padding:  20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4" style="background-color: red;"></div>
+				<div class="col-md-4" style="background-color: yellow;"></div>
+				<div class="col-md-4" style="background-color: blue;"></div>
+				<div class="col-md-4" style="background-color: red;"></div>
+				<div class="col-md-4" style="background-color: yellow;"></div>
+				<div class="col-md-4" style="background-color: blue;"></div>
+				<div class="col-md-4" style="background-color: red;"></div>
+				<div class="col-md-4" style="background-color: yellow;"></div>
+				<div class="col-md-4" style="background-color: blue;"></div>
+				<!--<div class="col-md-4" style="background-color: orange;"></div>
+				<div class="col-md-2" style="background-color: purple;"></div>-->
+			</div>
+		</div>
+	</body>
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+</html>

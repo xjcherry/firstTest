@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				margin: 50px auto;
+				background-color: orange;
+				text-align: center;
+				font:bolder 30px/200px "微软雅黑";	
+				/*设置过渡相关属性*/
+				/*transition:transform 3.5s ease 0.2s;*/
+				transition:3.5s;
+				/*transform-origin: 200px 200px;*/
+			}
+			/*①旋转*/
+		 div:nth-child(1):hover{
+				
+				transform: rotate(720deg);
+			}
+			/*②单方向位移*/
+			div:nth-child(2):hover{
+				transform:translateX(300px);
+			}
+			/*③双轴位移*/
+			div:nth-child(3):hover{
+				transform: translate(300px,-300px);
+			}
+			/*④单轴缩放*/
+			div:nth-child(4):hover{
+				/*x轴：scaleX；y轴：scaleY*/
+				transform:scaleX(2.0)
+			}
+			/*⑤双轴缩放*/
+			div:nth-child(5):hover{
+				transform: scale(2.0,0.5);
+			}
+			/*⑥单轴倾斜*/
+			div:nth-child(6):hover{
+				transform: skewY(45deg);
+			}
+			/*⑦双轴倾斜*/
+			div:nth-child(7):hover{
+				transform: skew(90deg,90deg);
+				/*transform:skewY(30deg);*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+		<div>旋转</div>
+		<div>x轴位移</div>
+		<div>双轴位移</div>
+		<div>单轴缩放</div>
+		<div>双轴缩放</div>
+		<div>单轴倾斜</div>
+		<div>双轴倾斜</div>
+		</section>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.stage{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -100px;
+				margin-top: -100px;
+				border: 1px solid red;
+				/*舞台是提供运动的空间，也就是提供内部运动子元素坐标系*/
+				/*并且提供preserve-3d来支持3d坐标系中的3d运动*/
+				transform-style: preserve-3d;
+				/*默认情况下视觉角度和z轴处于平行状态，无法看出子元素在z轴上的运动效果*/
+				/*可以通过旋转舞台的坐标轴x轴或y轴或x、y轴，让z轴和视觉角度之间形成夹角*/
+				transform:rotateY(30deg);
+				/*-webkit-transform:rotateX(88deg);
+				-moz-transform:rotateX(88deg);
+				-ms-transform:rotateX(88deg);
+				-o-transform:rotateX(88deg);*/
+				/*通过设置景深，也可以产生3d视觉效果（景深类似于视觉远近，物体大小变化）*/
+				/*-webkit-perspective: 100px;*/
+			}
+			.ele{
+				width: 100%;
+				height: 100%;
+				background-color: yellow;
+				/*transition: 2s;*/
+				/*运动元素是运动的主体，所有过渡效果是由运动体自身来规定*/
+				-webkit-transition: 2s;
+			}
+			.stage:hover .ele{
+				transform: translateZ(50px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="stage">
+			<div class="ele"></div>
+		</div>
+	</body>
+
+</html>

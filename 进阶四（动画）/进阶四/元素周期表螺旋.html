@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,html{
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				transform: scale(0.8);
+			}
+			p{
+				margin: 0;
+			}
+			.stage{
+				width: 100%;
+				height: 100%;				
+				-webkit-perspective: 3000px;
+			}
+			#ag {
+				visibility: hidden;
+			}
+			.ele{
+				width: 70px;
+				height: 80px;
+				margin: 600px auto;
+				
+				border: 1px solid red;
+				-webkit-transition: 100s;
+				-webkit-transform-style: preserve-3d;
+				position: relative;
+				
+			}
+			.ele>div{
+				width: 100%;
+				height:100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color:rgba(0,82,82,0.75);
+				transition: 2s;
+			}			
+			.ele p:nth-child(1){
+				width: 70px;
+				height: 12px;
+				text-align: right;
+				font-size: 12px;
+				line-height: 12px;
+				color: rgb(81,81,194);
+				margin-top: 8px;
+				margin-right: 10px;
+			}
+			.ele p:nth-child(2){
+				width: 100%;
+				height: 20px;
+				text-align: center;
+				font-size: 20px;
+				line-height: 20px;
+				color: rgb(191,191,242);
+				margin-top: 5px;				
+			}
+			.ele p:nth-child(3){
+				width: 100%;
+				height: 12px;
+				text-align: center;
+				font-size: 12px;
+				line-height: 12px;
+				color: rgb(87,184,184);
+				margin-top: 10px;				
+			}
+			.ele p:nth-child(4){
+				width: 100%;
+				height: 12px;
+				text-align: center;
+				font-size: 12px;
+				line-height: 12px;
+				color: rgb(87,184,184);
+							
+			}
+			.ele>.kong{
+				background-color: transparent;
+			}
+			body:hover .ele>div:nth-child(1){
+				-webkit-transform: rotateY(0deg) translateY(0) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(18){
+				-webkit-transform: rotateY(10deg) translateY(5px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(19){
+				-webkit-transform: rotateY(20deg) translateY(10px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(20){
+				-webkit-transform: rotateY(30deg) translateY(15px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(31){
+				-webkit-transform: rotateY(40deg) translateY(20px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(32){
+				-webkit-transform: rotateY(50deg) translateY(25px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(33){
+				-webkit-transform: rotateY(60deg) translateY(30px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(34){
+				-webkit-transform: rotateY(70deg) translateY(35px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(35){
+				-webkit-transform: rotateY(80deg) translateY(40px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(36){
+				-webkit-transform: rotateY(90deg) translateY(45px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(37){
+				-webkit-transform: rotateY(100deg) translateY(50px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(38){
+				-webkit-transform: rotateY(110deg) translateY(55px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(49){
+				-webkit-transform:rotateY(120deg) translateY(60px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(50){
+				-webkit-transform:rotateY(130deg) translateY(65px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(51){
+				-webkit-transform:rotateY(140deg) translateY(70px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(52){
+				-webkit-transform:rotateY(150deg) translateY(75px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(53){
+				-webkit-transform:rotateY(160deg) translateY(80px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(54){
+				-webkit-transform:rotateY(170deg) translateY(90px) translateZ(500px);
+			}
+			
+			body:hover .ele>div:nth-child(55){
+				-webkit-transform:rotateY(180deg) translateY(95px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(56){
+				-webkit-transform:rotateY(190deg) translateY(100px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(57){
+				-webkit-transform:rotateY(200deg) translateY(105px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(58){
+				-webkit-transform:rotateY(210deg) translateY(110px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(59){
+				-webkit-transform:rotateY(220deg) translateY(115px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(60){
+				-webkit-transform: rotateY(230deg) translateY(120px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(61){
+				-webkit-transform: rotateY(240deg) translateY(125px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(62){
+				-webkit-transform: rotateY(250deg) translateY(130px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(63){
+				-webkit-transform: rotateY(260deg) translateY(135px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(64){
+				-webkit-transform: rotateY(270deg) translateY(140px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(65){
+				-webkit-transform: rotateY(280deg) translateY(145px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(66){
+				-webkit-transform: rotateY(290deg) translateY(150px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(67){
+				-webkit-transform: rotateY(300deg)translateY(155px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(68){
+				-webkit-transform: rotateY(310deg) translateY(160px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(69){
+				-webkit-transform: rotateY(320deg) translateY(165px) translateZ(500px) ;
+			}
+			
+			body:hover .ele>div:nth-child(70){
+				-webkit-transform: rotateY(330deg) translateY(170px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(71){
+				-webkit-transform: rotateY(340deg) translateY(175px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(72){
+				-webkit-transform: rotateY(350deg) translateY(180px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(73){
+				-webkit-transform: rotateY(0deg) translateY(185px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(74){
+				-webkit-transform: rotateY(10deg) translateY(190px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(75){
+				-webkit-transform: rotateY(20deg) translateY(195px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(76){
+				-webkit-transform: rotateY(30deg) translateY(200px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(77){
+				-webkit-transform: rotateY(40deg) translateY(205px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(78){
+				-webkit-transform: rotateY(50deg) translateY(210px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(79){
+				-webkit-transform: rotateY(60deg) translateY(215px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(80){
+				-webkit-transform: rotateY(70deg) translateY(220px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(81){
+				-webkit-transform: rotateY(80deg) translateY(225px) translateZ(500px) ;
+			}
+			
+			body:hover .ele>div:nth-child(82){
+				-webkit-transform: rotateY(90deg) translateY(230px) translateZ(500px) ;
+			}
+			
+			body:hover .ele>div:nth-child(84){
+				-webkit-transform: rotateY(100deg) translateY(240px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(85){
+				-webkit-transform: rotateY(110deg) translateY(245px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(86){
+				-webkit-transform: rotateY(120deg) translateY(250px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(87){
+				-webkit-transform: rotateY(130deg) translateY(255px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(88){
+				-webkit-transform: rotateY(140deg) translateY(260px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(89){
+				-webkit-transform: rotateY(150deg) translateY(265px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(90){
+				-webkit-transform: rotateY(160deg) translateY(270px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(91){
+				-webkit-transform: rotateY(170deg) translateY(275px) translateZ(500px) ;
+			}
+			
+			body:hover .ele>div:nth-child(92){
+				-webkit-transform: rotateY(180deg) translateY(280px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(94){
+				-webkit-transform: rotateY(190deg) translateY(285px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(95){
+				-webkit-transform: rotateY(200deg) translateY(290px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(96){
+				-webkit-transform: rotateY(210deg) translateY(295px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(97){
+				-webkit-transform: rotateY(220deg) translateY(300px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(98){
+				-webkit-transform: rotateY(230deg) translateY(305px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(99){
+				-webkit-transform: rotateY(240deg) translateY(310px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(100){
+				-webkit-transform: rotateY(250deg) translateY(320px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(101){
+				-webkit-transform: rotateY(260deg) translateY(325px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(102){
+				-webkit-transform: rotateY(270deg) translateY(330px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(103){
+				-webkit-transform: rotateY(280deg) translateY(335px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(104){
+				-webkit-transform: rotateY(290deg) translateY(340px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(105){
+				-webkit-transform: rotateY(300deg) translateY(345px) translateZ(500px);
+			}			
+			body:hover .ele>div:nth-child(106){
+				-webkit-transform: rotateY(310deg) translateY(350px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(107){
+				-webkit-transform: rotateY(320deg) translateY(355px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(108){
+				-webkit-transform:rotateY(330deg) translateY(360px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(109){
+				-webkit-transform:rotateY(340deg) translateY(365px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(110){
+				-webkit-transform:rotateY(350deg) translateY(370px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(112){
+				-webkit-transform: rotateY(0deg) translateY(375px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(113){
+				-webkit-transform: rotateY(10deg) translateY(380px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(114){
+				-webkit-transform: rotateY(20deg) translateY(385px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(115){
+				-webkit-transform: rotateY(30deg) translateY(390px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(116){
+				-webkit-transform: rotateY(40deg) translateY(395px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(117){
+				-webkit-transform: rotateY(50deg) translateY(400px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(118){
+				-webkit-transform: rotateY(40deg) translateY(405px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(119){
+				-webkit-transform: rotateY(50deg) translateY(410px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(120){
+				-webkit-transform: rotateY(60deg) translateY(415px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(121){
+				-webkit-transform: rotateY(70deg) translateY(420px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(122){
+				-webkit-transform: rotateY(80deg) translateY(425px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(123){
+				-webkit-transform: rotateY(90deg) translateY(430px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(124){
+				-webkit-transform: rotateY(100deg) translateY(435px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(125){
+				-webkit-transform: rotateY(110deg) translateY(440px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(126){
+				-webkit-transform: rotateY(120deg) translateY(450px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(148){
+				-webkit-transform: rotateY(130deg) translateY(455px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(149){
+				-webkit-transform: rotateY(140deg) translateY(460px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(150){
+				-webkit-transform: rotateY(150deg) translateY(465px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(151){
+				-webkit-transform: rotateY(160deg) translateY(470px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(152){
+				-webkit-transform: rotateY(170deg) translateY(475px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(153){
+				-webkit-transform: rotateY(180deg) translateY(480px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(154){
+				-webkit-transform: rotateY(190deg) translateY(485px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(155){
+				-webkit-transform: rotateY(200deg) translateY(490px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(156){
+				-webkit-transform: rotateY(210deg) translateY(495px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(157){
+				-webkit-transform: rotateY(220deg) translateY(500px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(158){
+				-webkit-transform: rotateY(230deg) translateY(505px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(159){
+				-webkit-transform: rotateY(240deg) translateY(510px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(160){
+				-webkit-transform: rotateY(250deg) translateY(515px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(161){
+				-webkit-transform: rotateY(260deg) translateY(520px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(162){
+				-webkit-transform: rotateY(270deg) translateY(525px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(166){
+				-webkit-transform: rotateY(280deg) translateY(530px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(167){
+				-webkit-transform: rotateY(290deg) translateY(535px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(168){
+				-webkit-transform: rotateY(300deg) translateY(540px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(169){
+				-webkit-transform: rotateY(310deg) translateY(545px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(170){
+				-webkit-transform: rotateY(320deg) translateY(550px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(171){
+				-webkit-transform: rotateY(330deg) translateY(555px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(172){
+				-webkit-transform: rotateY(340deg) translateY(560px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(173){
+				-webkit-transform: rotateY(340deg) translateY(565px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(174){
+				-webkit-transform: rotateY(350deg) translateY(570px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(175){
+				-webkit-transform: rotateY(0deg) translateY(575px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(176){
+				-webkit-transform: rotateY(10deg) translateY(580px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(177){
+				-webkit-transform: rotateY(20deg) translateY(585px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(178){
+				-webkit-transform: rotateY(30deg) translateY(590px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(179){
+				-webkit-transform: rotateY(40deg) translateY(595px) translateZ(500px) ;
+			}
+			body:hover .ele>div:nth-child(180){
+				-webkit-transform: rotateY(50deg) translateY(600px) translateZ(500px);
+			}
+			body:hover .ele>div:nth-child(83){
+				-webkit-transform: rotateY(60deg) translateY(605deg) translateZ(500px) ;
+			}
+			.ele:hover{
+				-webkit-transform:rotateY(7200deg) rotateX(7200deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="stage">
+			<div class="ele">
+					<div>
+						<p>1</p>
+						<p>H</p>
+						<p>Hydrogen</p>
+						<p>1.00794</p>
+					</div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div>
+						<p>2</p>
+						<p>He</p>
+						<p>Helium</p>
+						<p>4.002602</p>
+					</div>
+				
+				
+					<div>
+						<p>3</p>
+						<p>Li</p>
+						<p>Lithium</p>
+						<p>6.941</p>
+					</div>
+					<div>
+						<p>4</p>
+						<p>Be</p>
+						<p>Beryllium</p>
+						<p>9.012182</p>
+					</div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div>
+						<p>5</p>
+						<p>B</p>
+						<p>Boron</p>
+						<p>10.811</p>
+					</div>
+					<div>
+						<p>6</p>
+						<p>C</p>
+						<p>Carbon</p>
+						<p>12.0107</p>
+					</div>
+					<div>
+						<p>7</p>
+						<p>N</p>
+						<p>Nitrogen</p>
+						<p>14.0067</p>
+					</div>
+					<div>
+						<p>8</p>
+						<p>O</p>
+						<p>Oxygen</p>
+						<p>15.9994</p>
+					</div>					
+					<div>
+						<p>9</p>
+						<p>F</p>
+						<p>Fluorine</p>
+						<p>18.9984032</p>
+					</div>
+					<div>
+						<p>10</p>
+						<p>Ne</p>
+						<p>Neon</p>
+						<p>20.1797</p>
+					</div>					
+					<div>
+						<p>11</p>
+						<p>Na</p>
+						<p>Sodium</p>
+						<p>22.98976...</p>
+					</div>
+					<div>
+						<p>12</p>
+						<p>Mg</p>
+						<p>Sodium</p>
+						<p>22.98976...</p>
+					</div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div>
+						<p>13</p>
+						<p>Al</p>
+						<p>Aluminium</p>
+						<p>26.9815386</p>
+					</div>
+					<div>
+						<p>14</p>
+						<p>Si</p>
+						<p>Silicon</p>
+						<p>28.0855</p>
+					</div>
+					<div>
+						<p>15</p>
+						<p>P</p>
+						<p>Phosphorus</p>
+						<p>30.973762</p>
+					</div>
+					<div>
+						<p>16</p>
+						<p>S</p>
+						<p>Sulfur</p>
+						<p>32.065</p>
+					</div>
+					<div>
+						<p>17</p>
+						<p>Cl</p>
+						<p>Chlorine</p>
+						<p>35.453</p>
+					</div>
+					<div>
+						<p>18</p>
+						<p>Ar</p>
+						<p>Argon</p>
+						<p>39.948</p>
+					</div>
+					<div>
+						<p>19</p>
+						<p>K</p>
+						<p>Potassium</p>
+						<p>39.948</p>
+					</div>
+					<div>
+						<p>20</p>
+						<p>Ca</p>
+						<p>Calcium</p>
+						<p>40.078</p>
+					</div>
+					<div>
+						<p>21</p>
+						<p>Sc</p>
+						<p>Scandium</p>
+						<p>44.955912</p>
+					</div>
+					<div>
+						<p>22</p>
+						<p>Ti</p>
+						<p>Titanium</p>
+						<p>47.867</p>
+					</div>
+					<div>
+						<p>23</p>
+						<p>V</p>
+						<p>Vanadium</p>
+						<p>50.9415</p>
+					</div>
+					<div>
+						<p>24</p>
+						<p>Cr</p>
+						<p>Chromium</p>
+						<p>51.9961</p>
+					</div>
+					<div>
+						<p>25</p>
+						<p>Mn</p>
+						<p>Manganese</p>
+						<p>54.938045</p>
+					</div>
+					<div>
+						<p>26</p>
+						<p>Fe</p>
+						<p>Iron</p>
+						<p>55.845</p>
+					</div>
+					<div>
+						<p>27</p>
+						<p>Co</p>
+						<p>Cobalt</p>
+						<p>58.933195</p>
+					</div>
+					<div>
+						<p>28</p>
+						<p>Ni</p>
+						<p>Nickel</p>
+						<p>58.6934</p>
+					</div>
+					<div>
+						<p>29</p>
+						<p>Cu</p>
+						<p>Copper</p>
+						<p>63.546</p>
+					</div>
+					<div>
+						<p>30</p>
+						<p>Zn</p>
+						<p>Zinc</p>
+						<p>44.955912</p>
+					</div>
+					<div>
+						<p>31</p>
+						<p>Ga</p>
+						<p>Gallium</p>
+						<p>69.723</p>
+					</div>
+					<div>
+						<p>32</p>
+						<p>Ge</p>
+						<p>Germanium</p>
+						<p>72.63</p>
+					</div>
+					<div>
+						<p>33</p>
+						<p>As</p>
+						<p>Arsenic</p>
+						<p>74.9216</p>
+					</div>
+					<div>
+						<p>34</p>
+						<p>Se</p>
+						<p>Selenium</p>
+						<p>78.96</p>
+					</div>
+					<div>
+						<p>35</p>
+						<p>Br</p>
+						<p>Bromine</p>
+						<p>79.904</p>
+					</div>
+					<div>
+						<p>36</p>
+						<p>Kr</p>
+						<p>Krypton</p>
+						<p>83.798</p>
+					</div>
+					<div>
+						<p>37</p>
+						<p>Rb</p>
+						<p>Rubidium</p>
+						<p>85.4678</p>
+					</div>
+					<div>
+						<p>38</p>
+						<p>Sr</p>
+						<p>Strontium</p>
+						<p>87.62</p>	
+					</div>
+					<div>
+						<p>39</p>
+						<p>Y</p>
+						<p>Yttrium</p>
+						<p>88.90585</p>
+					</div>
+					<div>
+						<p>40</p>
+						<p>Zr</p>
+						<p>Zirconium</p>
+						<p>91.224</p>
+					</div>
+					<div>
+						<p>41</p>
+						<p>Nb</p>
+						<p>Niobium</p>
+						<p>92.90628</p>
+					</div>
+					<div>
+						<p>42</p>
+						<p>Mo</p>
+						<p>Molybdenum</p>
+						<p>95.96</p>
+					</div>
+					<div>
+						<p>43</p>
+						<p>Tc</p>
+						<p>Technetium</p>
+						<p>(98)</p>
+					</div>
+					<div>
+						<p>44</p>
+						<p>Ru</p>
+						<p>Ruthenium</p>
+						<p>101.07</p>
+					</div>
+					<div>
+						<p>45</p>
+						<p>Rh</p>
+						<p>Rhodium</p>
+						<p>102.9055</p>
+					</div>
+					<div>
+						<p>46</p>
+						<p>Pd</p>
+						<p>Palladium</p>
+						<p>106.42</p>
+					</div>
+					<div id="ag">
+						<p>47</p>
+						<p>Ag</p>
+						<p>Silver</p>
+						<p>107.8682</p>
+					</div>
+					<div>
+						<p>48</p>
+						<p>Cd</p>
+						<p>Cadmium</p>
+						<p>112.411</p>
+					</div>
+					<div>
+						<p>49</p>
+						<p>In</p>
+						<p>Indium</p>
+						<p>114.818</p>
+					</div>
+					<div>
+						<p>50</p>
+						<p>Sn</p>
+						<p>Tin</p>
+						<p>118.71</p>
+					</div>
+					<div>
+						<p>51</p>
+						<p>Sb</p>
+						<p>Antimony</p>
+						<p>121.76</p>
+					</div>
+					<div>
+						<p>52</p>
+						<p>Te</p>
+						<p>Tellurium</p>
+						<p>127.6</p>
+					</div>
+					<div>
+						<p>53</p>
+						<p>I</p>
+						<p>Iodine</p>
+						<p>126.90447</p>
+					</div>
+					<div>
+						<p>54</p>
+						<p>Xe</p>
+						<p>Xenon</p>
+						<p>131.293</p>
+					</div>
+					<div>
+						<p>55</p>
+						<p>Cs</p>
+						<p>Caesium</p>
+						<p>132.9054</p>
+					</div>
+					<div>
+						<p>56</p>
+						<p>Ba</p>
+						<p>Barium</p>
+						<p>132.9054</p>
+					</div>
+					<div class="kong"></div>
+					<div>
+						<p>72</p>
+						<p>Hf</p>
+						<p>Hafnium</p>
+						<p>178.49</p>
+					</div>
+					<div>
+						<p>73</p>
+						<p>Ta</p>
+						<p>Tantalum</p>
+						<p>180.94788</p>
+					</div>
+					<div>
+						<p>74</p>
+						<p>W</p>
+						<p>Tungsten</p>
+						<p>183.84</p>
+					</div>
+					<div>
+						<p>75</p>
+						<p>Re</p>
+						<p>Rhenium</p>
+						<p>186.207</p>
+					</div>
+					<div>
+						<p>76</p>
+						<p>Os</p>
+						<p>Osmium</p>
+						<p>190.23</p>
+					</div>
+					<div>
+						<p>77</p>
+						<p>Ir</p>
+						<p>Iridium</p>
+						<p>192.217</p>
+					</div>
+					<div>
+						<p>78</p>
+						<p>Pt</p>
+						<p>Platinum</p>
+						<p>195.084</p>
+					</div>
+					<div>
+						<p>79</p>
+						<p>Au</p>
+						<p>Gold</p>
+						<p>196.966569</p>
+					</div>
+					<div>
+						<p>80</p>
+						<p>Hg</p>
+						<p>Mercury</p>
+						<p>200.59</p>
+					</div>
+					<div>
+						<p>81</p>
+						<p>Tl</p>
+						<p>Thallium</p>
+						<p>204.3833</p>
+					</div>
+					<div>
+						<p>82</p>
+						<p>Pb</p>
+						<p>Lead</p>
+						<p>207.2</p>
+					</div>
+					<div>
+						<p>83</p>
+						<p>Bi</p>
+						<p>Bismuth</p>
+						<p>208.9804</p>
+					</div>
+					<div>
+						<p>84</p>
+						<p>Po</p>
+						<p>Polonium</p>
+						<p>(209)</p>
+					</div>
+					<div>
+						<p>85</p>
+						<p>At</p>
+						<p>Astatine</p>
+						<p>(210)</p>
+					</div>
+					<div>
+						<p>86</p>
+						<p>Rn</p>
+						<p>Radon</p>
+						<p>(222)</p>
+					</div>
+					<div>
+						<p>87</p>
+						<p>Fr</p>
+						<p>Francium</p>
+						<p>(223)</p>
+					</div>
+					<div>
+						<p>88</p>
+						<p>Ra</p>
+						<p>Radium</p>
+						<p>(226)</p>
+					</div>
+					<div class="kong"></div>
+					<div>
+						<p>104</p>
+						<p>Rf</p>
+						<p>Rutherfordium</p>
+						<p>(267)</p>
+					</div>
+					<div>
+						<p>105</p>
+						<p>Db</p>
+						<p>Dubnium</p>
+						<p>(268)</p>
+					</div>
+					<div>
+						<p>106</p>
+						<p>Sg</p>
+						<p>Seaborgium</p>
+						<p>(271)</p>
+					</div>
+					<div>
+						<p>107</p>
+						<p>Bh</p>
+						<p>Bohrium</p>
+						<p>(272)</p>
+					</div>
+					<div>
+						<p>108</p>
+						<p>Hs</p>
+						<p>Hassium</p>
+						<p>(270)</p>
+					</div>
+					<div>
+						<p>109</p>
+						<p>Mt</p>
+						<p>Meitnerium</p>
+						<p>(276)</p>
+					</div>
+					<div>
+						<p>110</p>
+						<p>Ds</p>
+						<p>Darmstadium</p>
+						<p>(281)</p>
+					</div>
+					<div>
+						<p>111</p>
+						<p>Rg</p>
+						<p>Roentgenium</p>
+						<p>(280)</p>
+					</div>
+					<div>
+						<p>112</p>
+						<p>Cn</p>
+						<p>Copernicium</p>
+						<p>(285)</p>
+					</div>
+					<div>
+						<p>113</p>
+						<p>Uut</p>
+						<p>Unutrium</p>
+						<p>(284)</p>
+					</div>
+					<div>
+						<p>114</p>
+						<p>Fl</p>
+						<p>Flerovium</p>
+						<p>(289)</p>
+					</div>
+					<div>
+						<p>115</p>
+						<p>Uup</p>
+						<p>Ununpentium</p>
+						<p>(288)</p>
+					</div>
+					<div>
+						<p>116</p>
+						<p>Lv</p>
+						<p>Livermorium</p>
+						<p>(293)</p>
+					</div>
+					<div>
+						<p>117</p>
+						<p>Uus</p>
+						<p>Ununseptium</p>
+						<p>(294)</p>
+					</div>				
+					<div>
+						<p>118</p>
+						<p>Uuo</p>
+						<p>Ununoctium</p>
+						<p>(294)</p>
+					</div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div>
+						<p>57</p>
+						<p>La</p>
+						<p>Lanthanum</p>
+						<p>138.90547</p>
+					</div>
+					<div>
+						<p>58</p>
+						<p>Ce</p>
+						<p>Cerium</p>
+						<p>140.116</p>
+					</div>
+					<div>
+						<p>59</p>
+						<p>Pr</p>
+						<p>Praseodymium</p>
+						<p>140.90765</p>
+					</div>
+					<div>
+						<p>60</p>
+						<p>Pm</p>
+						<p>Promethium</p>
+						<p>(145)</p>
+					</div>
+					<div>
+						<p>61</p>
+						<p>Sm</p>
+						<p>Samarium</p>
+						<p>150.36</p>
+					</div>
+					<div>
+						<p>62</p>
+						<p>Eu</p>
+						<p>Europium</p>
+						<p>151.964</p>
+					</div>
+					<div>
+						<p>63</p>
+						<p>Gd</p>
+						<p>Gadolinium</p>
+						<p>157.25</p>
+					</div>
+					<div>
+						<p>64</p>
+						<p>Tb</p>
+						<p>Terbium</p>
+						<p>158.92535</p>
+					</div>
+					<div>
+						<p>65</p>
+						<p>Dy</p>
+						<p>Dysprosium</p>
+						<p>162.5</p>
+					</div>
+					<div>
+						<p>66</p>
+						<p>Ho</p>
+						<p>Holmium</p>
+						<p>164.93032</p>
+					</div>
+					<div>
+						<p>67</p>
+						<p>Er</p>
+						<p>Erbium</p>
+						<p>167.259</p>
+					</div>
+					<div>
+						<p>68</p>
+						<p>Tm</p>
+						<p>Thulium</p>
+						<p>168.93421</p>
+					</div>
+					<div>
+						<p>69</p>
+						<p>Yb</p>
+						<p>Ytterbium</p>
+						<p>173.054</p>
+					</div>
+					<div>
+						<p>70</p>
+						<p>Lu</p>
+						<p>Lutetium</p>
+						<p>174.9668</p>
+					</div>				
+					<div>
+						<p>71</p>
+						<p>Hf</p>
+						<p>Hafnium</p>
+						<p>178.49</p>
+					</div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div class="kong"></div>
+					<div>
+						<p>89</p>
+						<p>Ra</p>
+						<p>Radium</p>
+						<p>(226)</p>
+					</div>
+					<div>
+						<p>90</p>
+						<p>Ac</p>
+						<p>Actinium</p>
+						<p>(227)</p>
+					</div>
+					<div>
+						<p>91</p>
+						<p>Th</p>
+						<p>Thorium</p>
+						<p>232.03806</p>
+					</div>
+					<div>
+						<p>92</p>
+						<p>U</p>
+						<p>Uranium</p>
+						<p>238.02891</p>
+					</div>
+					<div>
+						<p>93</p>
+						<p>Np</p>
+						<p>Neptunium</p>
+						<p>(237)</p>
+					</div>
+					<div>
+						<p>94</p>
+						<p>Pu</p>
+						<p>Plutonium</p>
+						<p>(244)</p>
+					</div>
+					<div>
+						<p>95</p>
+						<p>Am</p>
+						<p>Americium</p>
+						<p>(243)</p>
+					</div>
+					<div>
+						<p>96</p>
+						<p>Cm</p>
+						<p>Curium</p>
+						<p>(247)</p>
+					</div>
+					<div>
+						<p>97</p>
+						<p>Bk</p>
+						<p>Berkelium</p>
+						<p>(247)</p>
+					</div>
+					<div>
+						<p>98</p>
+						<p>Cf</p>
+						<p>Californium</p>
+						<p>(251)</p>
+					</div>
+					<div>
+						<p>99</p>
+						<p>Es</p>
+						<p>Einstenium</p>
+						<p>(252)</p>
+					</div>
+					<div>
+						<p>100</p>
+						<p>Fm</p>
+						<p>Fermium</p>
+						<p>(257)</p>
+					</div>
+					<div>
+						<p>101</p>
+						<p>Md</p>
+						<p>Mendelevium</p>
+						<p>(258)</p>
+					</div>
+					<div>
+						<p>102</p>
+						<p>No</p>
+						<p>Nobelium</p>
+						<p>(259)</p>
+					</div>				
+					<div>
+						<p>103</p>
+						<p>Lr</p>
+						<p>Lawrencium</p>
+						<p>(262)</p>
+					</div>				
+			</div>
+		</div>
+	</body>
+
+</html>

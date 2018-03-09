@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: coral;
+				text-align: center;
+				font:bold 30px/200px "微软雅黑" ;
+			}
+			div{
+				/*transition-property：该属性规定该元素的哪个或哪些属性可以产生过渡效果*/
+				/*一般需要实现多个属性存在过渡效果，用all来实现*/
+				/*transition-property: width,color,background-color;*/
+				transition-property:all;
+				/*transition-duration:规定该属性规定过渡的持续时间，单位为ms和s*/
+				transition-duration: 3500ms;
+				/*transition-timing-function:运动曲线（贝塞尔曲线）控制整个过渡过程的速率*/
+				/*①linear 匀速 ②ease（默认） 慢-快-慢 ③ease-in 慢-快 ④ease-out 快-慢 ⑤ease-in-out 慢-快-慢*/
+				transition-timing-function: ease-in-out;
+				/*transition-delay:过渡延迟，多少s/ms后执行过渡效果*/
+				transition-delay: 0.2s;
+				/*参数：过渡的属性 过渡的持续时间 过渡曲线 过渡延迟执行时间*/
+				/*transition: all 3.5s ease 0.2s;*/
+				/*最简写法*/
+				transition: 3.5s;
+			}
+			/*①伪类：hover*/
+			/*div:hover{
+				width: 100vw;
+				background-color: brown;
+				color: orange;
+			}*/
+			/*div{
+				width: 100vw;
+				background-color:yellow;
+				color:green;
+			}*/
+			/*②伪类：active，点击过程中触发*/
+			/*div:active{
+				width: 100vw;
+				background-color: brown;
+				color: orange;
+			}*/
+			/*③响应式布局*/
+			@media only screen and (max-width:1000px ) {
+				div{
+				width: 100vw;
+				background-color: brown;
+				color: orange;
+			}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>过渡</div>
+		<!--<div onmousemove="this.style.width='100vw';this.style.backgroundColor='yellow';this.style.color='blue';" onmouseout="this.style.width='200px';this.style.backgroundColor='brown';this.style.color='orange';">过渡</div>-->
+		<!--<div id="div" onclick="div_back(this) " onmouseover="div_move(this)">过渡</div>
+	</body>
+	<script type="text/javascript">
+		function div_move(ele){
+//			var ele =document.getElementById('div');
+			ele.style.width='100vw';
+			ele.style.color='blue';
+			ele.style.backgroundColor='yellow';
+		}
+		function div_back(element){
+			element.style.width='200px';
+			element.style.color='black';
+			element.style.backgroundColor='orange';
+		}
+		
+	</script>-->
+</html>

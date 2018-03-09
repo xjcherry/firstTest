@@ -1,0 +1,9 @@
+/*实际开发过程中，所有元素的初始化操作均可放入此css文件中*/
+body{
+	margin: 0;
+	background: #EEE;
+}
+a{
+	text-decoration: none;
+	color: lightgray;
+}

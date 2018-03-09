@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font-size: 30px;
+				line-height: 50px;
+			}
+			@font-face {
+				font-family:"july-july";
+				src: url("font/july-july.woff");
+			}
+			@font-face {
+				font-family:"fang-song";
+				src: url("font/华文仿宋.ttf");
+			}
+			@font-face {
+				font-family:"xing-kai";
+				src: url("font/kai-kai.ttc");
+				font-style: normal;
+				font-weight: bolder;
+			}
+			@font-face {
+				font-family:"wa-wa";
+				src: url("font/WawaSC-Regular.otf");
+			}
+		</style>
+		<style type="text/css">
+			.div1{
+				/*一般用客户端自带字体样式规定字体，需要做字体适配的安全处理*/
+				font-family: "microsoft yahei",arial;
+			}
+			.div2{
+				/*通过服务器加载字体，无需用户在客户端安装，也能保证用户看到的效果达到预期值*/
+				font-family: "july-july";
+			}
+			.div3{
+				font-family: "fang-song";
+				font-size: 300px;
+				font-weight: 800;
+			}
+			.div4{
+				font-family: "xing-kai";
+			}
+			.div5{
+				font-family: "wa-wa";
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>ABC123abc汉文</div>
+		<div class="div1">ABC123abc汉文</div>
+		<div class="div2">ABC123abc汉文</div>
+		<div class="div3">ABC123abc汉文</div>
+		<div class="div4">ABC123abc汉文</div>
+		<div class="div5">ABC123abc汉文</div>
+	</body>
+
+</html>

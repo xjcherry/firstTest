@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				background-color: blue;
+				width: 100px;
+				height: 100px;
+				box-sizing: content-box;
+				border: 10px solid blueviolet;
+				padding: 10px;
+				margin: 10px;
+				/*width*height=content*/
+				/*盒子显示内容为border+padding+content*/
+				/*border及padding不会改变width、height的值*/
+			}
+			.div2{
+				/*盒子显示内容为width*height*/
+				/*width=border+padding+content的宽*/
+				/*content宽=width-border-padding*/
+				/*当content被挤压很小后，内容依然可以显示，超出content后就在padding或border中显示*/
+				/*当border和padding的和大于width后，盒子会变大，此时没有content区域，但内容依然可以显示*/
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				box-sizing: border-box;
+				border: 10px solid orangered;
+				padding: 10px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="div1">123</div>
+		<div class="div2">345</div>
+	</body>
+
+</html>

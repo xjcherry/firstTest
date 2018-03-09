@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			
+			html,
+			body {
+				width: 100vw;
+				height: 100vh;
+				background-color: black;
+				transform-style: preserve-3d;
+			}
+			
+			.top {
+				width: 100vw;
+				height: 100vh;				
+				border: 1px solid transparent;
+				transform-style: preserve-3d;
+				overflow: hidden;
+			}
+			
+			p {
+				margin: 0;
+			}
+			.logo{
+				width: 100%;
+				height: 685px;
+				background-image: url(创想家盛典/images/bgimage.jpg);
+				background-size: 100vw 685px;
+				border: 1px solid transparent;
+			}
+			.main {
+				width: 208px;
+				height: 208px;
+				margin: 100px auto;
+				position: relative;
+				z-index: 2;
+				z-index: 10;
+			}
+			
+			.one,
+			.two,
+			.three {
+				position: relative;
+				transform-style: preserve-3d;
+			}
+			
+			.one>img:nth-child(1) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 208px;
+				width: 112px;
+				z-index: 1;
+				animation-name: hong ;
+				animation-duration: 2s ;
+				visibility: hidden;
+				animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes hong{
+				0%{
+					transform:translateX(-400px) ;
+					visibility: visible;
+					}
+				60%{
+					transform:translateX(-400px) ;
+					visibility: visible;
+				}
+				100%{
+					transform:translateX(0px) ;
+					visibility: visible;
+				}
+			}
+			.one>img:nth-child(2) {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 208px;
+				height: 178px;
+				z-index: 2;
+				animation-name: blue;
+				animation-duration: 2s ;
+				visibility: hidden;
+				animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes blue{
+				0%{
+					transform:translateX(400px) ;
+					visibility: visible;
+					}
+				60%{
+					transform:translateX(400px) ;
+					visibility: visible;
+				}
+				100%{
+					transform:translateX(0px) ;
+					visibility: visible;
+				}
+			}
+			.one>img:nth-child(3) {
+				position: absolute;
+				top: 84px;
+				right: 0px;
+				bottom: 0px;
+				width: 208px;
+				z-index: 2;
+				animation-name: yellow;
+				animation-duration: 2s ;
+				visibility: hidden;
+				animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes yellow{
+				0%{
+					transform:translateY(800px) ;
+					visibility: visible;
+					}
+				60%{
+					transform:translateY(800px) ;
+					visibility: visible;
+				}
+				100%{
+					transform:translateY(0px) ;
+					visibility: visible;
+				}
+			}
+			.two>img:nth-child(1) {
+				position: absolute;
+				top: 82px;
+				left: 0;
+				width: 44px;
+				height: 60px;
+				z-index: 3;
+				
+			}
+			
+			.two>img:nth-child(2) {
+				position: absolute;
+				top: 42px;
+				left: 50px;
+				width: 58px;
+				height: 110px;
+				z-index: 3;
+			}
+			
+			.two>img:nth-child(3) {
+				position: absolute;
+				top: 0px;
+				left: 85px;
+				width: 55px;
+				height: 182px;
+				z-index: 3;
+			}
+			
+			.two>img:nth-child(4) {
+				position: absolute;
+				top: 0px;
+				left: 115px;
+				width: 25px;
+				height: 112px;
+				z-index: 3;
+			}
+			
+			.two>img:nth-child(5) {
+				position: absolute;
+				top: 126px;
+				bottom: 0px;
+				left: 60px;
+				width: 150px;
+				height: 83px;
+				z-index: 3;
+				animation-name: blue_di;
+				animation-duration: 2s ;
+				visibility: hidden;
+				animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes blue_di{
+				0%{
+					transform:translateY(300px) translateX(300px);
+					visibility: visible;
+					}
+				60%{
+					transform:translateY(300px) translateX(300px) ;
+					visibility: visible;
+				}
+				100%{
+					transform:translateY(0px) translateX(0px) ;
+					visibility: visible;
+				}
+			}
+			.three>img:nth-child(1) {
+				position: absolute;
+				top: 89px;
+				left: 10px;
+				width: 28px;
+				height: 43px;
+				z-index: 4;
+				animation-name: big_di;
+				animation-duration: 2s ;
+				visibility: hidden;
+				animation-fill-mode: forwards;
+			}
+			@-webkit-keyframes big_di{
+				0%{
+					transform:translateX(-290px);
+					visibility: visible;
+					}
+				80%{
+					transform:translateX(-290px) ;
+					visibility: visible;
+				}
+				100%{
+					transform:translateX(0) ;
+					visibility: visible;
+				}
+			}
+			.three>img:nth-child(2) {
+				position: absolute;
+				top: 75px;
+				left: 50px;
+				width: 158px;
+				height: 133px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(3) {
+				position: absolute;
+				top: 87px;
+				left: 60px;
+				width: 15px;
+				height: 18px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(4) {
+				position: absolute;
+				top: 75px;
+				left: 85px;
+				width: 27px;
+				height: 63px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(5) {
+				position: absolute;
+				top: 182px;
+				left: 60px;
+				bottom: 0px;
+				width: 35px;
+				height: 26px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(6) {
+				position: absolute;
+				top: 182px;
+				left: 98px;
+				bottom: 0px;
+				width: 33px;
+				height: 26px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(7) {
+				position: absolute;
+				top: 182px;
+				left: 134px;
+				bottom: 0px;
+				width: 27px;
+				height: 26px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(8) {
+				position: absolute;
+				top: 182px;
+				left: 164px;
+				bottom: 0px;
+				width: 19px;
+				height: 26px;
+				z-index: 4;
+			}
+			
+			.three>img:nth-child(9) {
+				position: absolute;
+				top: 182px;
+				left: 186px;
+				bottom: 0px;
+				width: 22px;
+				height: 26px;
+				z-index: 4;
+			}
+			
+			p {
+				color: white;
+				width: 100%;
+				font-size: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			
+			.txt {
+				width: 100vw;
+				text-align: center;
+				position: absolute;
+				left: 0px;
+				bottom: 90px;
+				z-index: 1;
+			}
+			
+			.img1 {
+				animation-name: yellow_star;
+				animation-duration: 2s;
+				animation-delay: 1.5s;
+				animation-iteration-count: infinite;
+				animation-direction: normal;
+				animation-fill-mode: backwards;
+				position: absolute;
+				top: 180px;
+				right: 0px;
+				width: 100px;
+				height: 30px;
+			}
+			
+			@-webkit-keyframes yellow_star {
+				0% {
+					-webkit-transform: translateX(0px) translateY(0px);
+					transform: translateX(0px) translateY(0px);
+					opacity: 0;
+				}
+				100% {
+					-webkit-transform: translateX(-400px) translateY(-120px);
+					opacity: 1;
+				}
+			}
+			
+			.img2 {
+				animation-name: green_star;
+				animation-duration: 2.5s;
+				animation-delay: 1.5s;
+				animation-iteration-count: infinite;
+				animation-direction: normal;
+				animation-fill-mode: backwards;
+				position: absolute;
+				top: 200px;
+				right: 0px;
+				width: 150px;
+				height: 60px;
+			}
+			
+			@-webkit-keyframes green_star {
+				0% {
+					-webkit-transform: translateX(0px) translateY(0px);
+					transform: translateX(0px) translateY(0px);
+					opacity: 0;
+				}
+				100% {
+					-webkit-transform: translateX(-400px) translateY(150px);
+					opacity: 1;
+				}
+			}
+			
+			.img3 {
+				width: 26px;
+				height: 10px;
+				position: fixed;
+				left: 50vw;
+				bottom: 50px;
+				margin-left: -13px;
+				animation: jian 0.5s alternate infinite;
+			}
+			
+			@-webkit-keyframes jian {
+				from {}
+				to {
+					transform: translateY(5px);
+				}
+			}
+			
+			.img4 {
+				width: 170px;
+				height: 30px;
+				position: absolute;
+				left: 0;
+				top: 20vh;
+				animation-name: red_star;
+				animation-duration: 2s;
+				animation-delay: 3s;
+				animation-iteration-count: infinite;
+				animation-direction: normal;
+				animation-fill-mode: backwards;
+				/*animation-timing-function:cubic-bezier(0,0,1,-1.12);*/
+			}
+			
+			@-webkit-keyframes red_star {
+				0% {
+					transform: translateX(0px) translateY(0px);
+					opacity: 0;
+				}
+				100% {
+					transform: translateX(200px) translateY(100px);
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="top">
+			<div class="logo">
+			<div class="main">
+				<div class="one">
+					<img src="创想家盛典/images/red_bg.png" alt="" />
+					<img src="创想家盛典/images/blue_bg.png" alt="" />
+					<img src="创想家盛典/images/yellow_bg.png" />
+				</div>
+				<div class="two">
+					<img src="创想家盛典/images/s_blue_d.png" />
+					<img src="创想家盛典/images/s_gary_jiao.png" />
+					<img src="创想家盛典/images/s_green.png" />
+					<img src="创想家盛典/images/s_gary_top.png" />
+					<img src="创想家盛典/images/s_blue_di.png" />
+				</div>
+				<div class="three">
+					<img src="创想家盛典/images/big_d.png" />
+					<img src="创想家盛典/images/r_am.png" />
+					<img src="创想家盛典/images/s_red_dian.png" />
+					<img src="创想家盛典/images/e.png" />
+					<img src="创想家盛典/images/m.png" />
+					<img src="创想家盛典/images/a.png" />
+					<img src="创想家盛典/images/k.png" />
+					<img src="创想家盛典/images/e.png" />
+					<img src="创想家盛典/images/r.png" />
+				</div>
+			</div>
+			</div>
+			<div class="txt">
+			<p>2015</p>
+			<p>创想家盛典</p>
+		</div>
+		<img class="img3" src="创想家盛典/images/button_next.png" />
+		</div>
+
+		<img class="img1" src="创想家盛典/images/star_yellow.png" />
+		<img class="img2" src="创想家盛典/images/star_green.png" />
+		
+		<img class="img4" src="创想家盛典/images/star_red.png" />
+	</body>
+
+</html>

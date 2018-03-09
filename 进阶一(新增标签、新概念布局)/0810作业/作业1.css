@@ -1,0 +1,127 @@
+body{
+	margin: 0;
+	background-color: rgb(238,238,238);
+}
+a{
+	text-decoration: none;
+}
+.left{
+	height:40px;
+	width:45px;
+}
+.left a{
+	width:45px;
+	height:40px;
+	display: inline-block;
+	background-image:url('img/btn.png');
+	background-size:45px;
+}
+.center{
+	width:200px;
+	height:40px;
+	line-height:38px;
+	position: absolute;
+	top: 0px;
+	left: 415px;
+}
+.center a{
+	display: inline-block;
+	height:38px;
+	font-size:16px;
+	color:rgb(165,168,168);
+	margin-left:20px;
+	border-bottom:2px #fff solid;
+
+}
+.center a:hover{
+	color:#333333;
+	border-bottom:2px #cc6600 solid;
+}	
+
+.right{
+	width:116px;
+	height:40px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.right a{
+	display: inline-block;
+	height:40px;
+}
+.right_1{
+	background-image: url('img/refresh.png');
+	background-size: 45px;
+	width: 45px;
+	border-right: 1px solid rgb(226,226,226);
+}
+.right_2{
+	background-image: url('img/search.png');
+	background-size: 66px;
+	width: 66px;
+	
+}
+
+
+.main1{
+	width: 310px;
+	height: 320px;
+	padding: 10px;
+	border: 1px solid transparent;
+	padding: 15px;
+	float: left;
+	background-color: white;
+	border-right:5px solid #eeeeee;
+	border-bottom:5px solid #eeeeee;
+}
+.main1_1{
+	margin-top: 10px;
+}
+.main1_1_1{
+	margin-top: -22px;
+	margin-left:30px ;
+	width:280px ;
+	height: 20px;
+}
+.main1_1_1 .s1{
+	float: left;
+	font-size: 14px;
+	color:#cdcdcd;
+}
+.main1_1_1 .s2{
+	float:right;
+	font-size: 14px;
+	color:#cdcdcd;
+}
+.main1_2{
+	display: block;
+	font-size: 15px;
+	margin-top: 10px;
+}
+.main1_2 a{
+	float: left;
+	border: 1px solid rgb(240,240,240);
+	border-radius: 20px;
+	margin-right: 10px;
+	width: 40px;
+	height: 20px;
+}
+.main1_2 a div{
+	text-align: center;
+	line-height: 20px;
+	background-color: #f8f8f8;
+	color:grey;
+}
+.main1_3{
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+	background-image: url(img/like.jpg);
+	float: right;
+}
+.main1_3:hover{
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+	background-image: url(img/like2.jpg);
+}

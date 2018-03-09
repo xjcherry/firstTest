@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>宝贝列表</title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				background-color: #eeeeee;
+			}
+			a{
+				text-decoration: none;
+			}
+			.nav{
+				margin: 0 auto;
+				background-color: pink;
+				width: 80vw;
+				height: 10vw;
+			}
+			.main{
+				margin: 0 auto;
+				/*background-color: yellow;*/
+				width:70vw;
+				height: 65vw;
+				margin-top: 3vw;				
+			}
+			.left{
+				height: 10vw;
+				width: 7vw;
+				background-image: url(img/btn.png);
+				background-repeat: no-repeat;
+				background-size: 7vw 10vw;
+			}
+			.center{
+				width: 30vw;
+				height: 10vw;
+				margin: 0 auto;
+				margin-top: -10vw;	
+			}
+			.center a{
+				font-size: 2vw;
+				line-height: 10vw;				
+				display: block;
+				float: left;		
+				margin-right: 5vw;
+				color:rgb(165,168,168);				
+			}
+			.center a:hover{
+				border-bottom:3px #cc6600 solid;
+			}
+			.right {
+				display: block;
+				float: right;
+			}
+			.right .div1{
+				background-image: url(img/refresh.png);
+				height: 10vw;
+				width: 7vw;
+				background-repeat: no-repeat;
+				background-size: 7vw 10vw;
+				margin-top: -10vw;
+				margin-left: -7vw;
+				border-right:3px solid rgb(226,226,226);
+			}
+			.right .div2{
+				background-image: url(img/search.png);
+				height: 10vw;
+				width: 7vw;
+				background-repeat: no-repeat;
+				background-size: 7vw 10vw;
+				margin-top: -10vw;
+			}
+			.main1{
+				background-image: url(img/images1.jpg);
+				width: 20vw;
+				height: 25vw;
+				background-size: 20vw 15vw;
+				background-repeat: no-repeat;
+				border: 10px solid transparent;
+				float: left;
+				background-color: #FFFFFF;
+				/*border-right:10px #eeeeee solid ;
+				border-bottom:10px #eeeeee solid ;*/
+				margin-right: 12px;
+				margin-bottom: 12px;
+				min-width: 300px;
+				
+			}
+			/*.main1 .div1{
+				margin-left: 10px;
+			}*/
+			.main1 h3{
+				margin: 0px;
+				margin-top: 17vw;
+			}
+			.main1_1{
+				width: 17vw;
+				height: 2vw;
+				margin-top: -2vw;
+				margin-left: 3vw;
+				font-size: 15px;
+				line-height: 2vw;
+			}
+			.main1_1_1{
+				display: inline-block;
+				float: left;
+				color: #cdcdd4;
+			}
+			.main1_1_2{
+				display: inline-block;
+				float: right;
+				color: #cdcdd4;
+			}
+			.main1_2{
+				display: inline-block;
+			}
+			.main1_2 a{
+				float: left;
+				width: 40px;
+				height: 20px;
+				border: 1px solid #eaeaea;
+				background-color: #f8f8f8;
+				margin-right: 1vw;
+				border-radius: 20px;
+				line-height: 20px;
+				text-align: center;
+				margin-top: 2vw;
+			}
+			.main1_3{
+				float: right;
+				background-image: url(img/like.jpg);
+				width: 2vw;
+				height: 2vw;
+				margin-top: 1vw;
+				background-size: 2vw;
+			}
+			.main1_3:hover{
+				background-image: url(img/like2.jpg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<a href=""><div class="left"></div></a>
+			<div class="center">
+				<a href=""><div >随便逛逛</div></a>
+				<a href=""><div >阅读列表</div></a>
+			</div>
+			<div class="right">
+				<a href=""><div class="div2"></div></a>
+				<a href=""><div class="div1"></div></a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main1">
+				<a href=""><div class="div1" style="margin-top: 10px;"></div></a>
+				<a href=""><h3>手工制作vitage复古项链</h3></a>
+				<a href=""><img style="width: 2vw;height: 2vw;margin-top: 1vw;" src="img/icon.jpg"/></a>
+				<div class="main1_1">
+					<a href=""><div class="main1_1_1">纯手工珠宝</div></a>
+					<div class="main1_1_2">刚刚</div>
+				</div>
+				<div class="main1_2">
+					<a href=""><div>简洁</div></a>
+					<a href=""><div>唯美</div></a>
+					<a href=""><div>时尚</div></a>
+				</div>
+				<div class="main1_3">
+					<a href=""><div></div></a>
+				</div>
+			</div>
+			
+			<div class="main1">
+				<a href=""><div></div></a>
+				<a href=""><h3>手工制作vitage复古项链</h3></a>
+				<a href=""><img style="width: 2vw;height: 2vw;margin-top: 1vw;" src="img/icon.jpg"/></a>
+				<div class="main1_1">
+					<a href=""><div class="main1_1_1">纯手工珠宝</div></a>
+					<div class="main1_1_2">刚刚</div>
+				</div>
+				<div class="main1_2">
+					<a href=""><div>简洁</div></a>
+					<a href=""><div>唯美</div></a>
+					<a href=""><div>时尚</div></a>
+				</div>
+				<div class="main1_3">
+					<a href=""><div></div></a>
+				</div>
+			</div>
+			
+			<div class="main1">
+				<a href=""><div></div></a>
+				<a href=""><h3>手工制作vitage复古项链</h3></a>
+				<a href=""><img style="width: 2vw;height: 2vw;margin-top: 1vw;" src="img/icon.jpg"/></a>
+				<div class="main1_1">
+					<a href=""><div class="main1_1_1">纯手工珠宝</div></a>
+					<div class="main1_1_2">刚刚</div>
+				</div>
+				<div class="main1_2">
+					<a href=""><div>简洁</div></a>
+					<a href=""><div>唯美</div></a>
+					<a href=""><div>时尚</div></a>
+				</div>
+				<div class="main1_3">
+					<a href=""><div></div></a>
+				</div>
+			</div>
+			
+			<div class="main1">
+				<a href=""><div></div></a>
+				<a href=""><h3>手工制作vitage复古项链</h3></a>
+				<a href=""><img style="width: 2vw;height: 2vw;margin-top: 1vw;" src="img/icon.jpg"/></a>
+				<div class="main1_1">
+					<a href=""><div class="main1_1_1">纯手工珠宝</div></a>
+					<div class="main1_1_2">刚刚</div>
+				</div>
+				<div class="main1_2">
+					<a href=""><div>简洁</div></a>
+					<a href=""><div>唯美</div></a>
+					<a href=""><div>时尚</div></a>
+				</div>
+				<div class="main1_3">
+					<a href=""><div></div></a>
+				</div>
+			</div>
+			
+			<div class="main1">
+				<a href=""><div></div></a>
+				<a href=""><h3>手工制作vitage复古项链</h3></a>
+				<a href=""><img style="width: 2vw;height: 2vw;margin-top: 1vw;" src="img/icon.jpg"/></a>
+				<div class="main1_1">
+					<a href=""><div class="main1_1_1">纯手工珠宝</div></a>
+					<div class="main1_1_2">刚刚</div>
+				</div>
+				<div class="main1_2">
+					<a href=""><div>简洁</div></a>
+					<a href=""><div>唯美</div></a>
+					<a href=""><div>时尚</div></a>
+				</div>
+				<div class="main1_3">
+					<a href=""><div></div></a>
+				</div>
+			</div>
+			
+			<div class="main1">
+				<a href=""><div></div></a>
+				<a href=""><h3>手工制作vitage复古项链</h3></a>
+				<a href=""><img style="width: 2vw;height: 2vw;margin-top: 1vw;" src="img/icon.jpg"/></a>
+				<div class="main1_1">
+					<a href=""><div class="main1_1_1">纯手工珠宝</div></a>
+					<div class="main1_1_2">刚刚</div>
+				</div>
+				<div class="main1_2">
+					<a href=""><div>简洁</div></a>
+					<a href=""><div>唯美</div></a>
+					<a href=""><div>时尚</div></a>
+				</div>
+				<div class="main1_3">
+					<a href=""><div></div></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

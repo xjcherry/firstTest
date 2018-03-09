@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin: 15px auto;
+				width: 400px;
+				height: 200px;
+				border:15px solid red ;
+				background-color: yellow;
+			}
+			div{
+				/*数据源*/
+				border-image-source: url(img/border.png);
+				/*外偏移量，不可以为负值，但可以结合border-image-width使用*/
+				border-image-outset: 10px;
+				/*图片尺寸大小，一般和border的尺寸一样*/
+				border-image-width: 15px;
+				/*平铺方式：拉伸stretch 环绕round 填充repeat*/
+				border-image-repeat: repeat;
+				/*和图片源的尺寸相关，且有默认单位1px*/
+				border-image-slice: 50%;
+				/*border-image-slice: 50|%|fill;*/
+			}
+			a{
+				width: 300px;
+				height: 300px;
+				display: block;
+				border: 1px solid red;
+				position: relative;
+			}
+			a>div{
+				width: 300px;
+				height: 300px;
+				display: none;
+				/*float: left;*/
+				position: absolute;
+				z-index: 2;
+				text-align: center;
+				font-size: 30px;
+				background-color: rgba(0,0,0,0.5);
+			}
+			a:hover a>div{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>1234</div>
+		<a href="">
+			<div>dvhdvh</div>
+		</a>
+	</body>
+</html>

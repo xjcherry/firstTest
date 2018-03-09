@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0 auto;
+			}
+			/*1、百分比设置属性：参考父级元素*/
+			
+			.div1{
+				width: 50%;
+				height: 100px;
+				background-color: goldenrod;
+			}
+			/*2、最值限制*/
+			/*注：最小值起作用，最大值与设置值两个相比，较小值决定最大范围*/
+			/*若较小值小于最小值，那元素只有固定值且为最小值*/
+			/*③如果自身设置了文本大小，取自身值*/
+			.div1{
+				min-width: 300px;
+				max-width: 500px;
+			}
+			/*3、定位：四个方位百分比*/
+			
+			/*4、宽高等比：代表img*/
+			img{
+				width: 50%;
+			}
+			/*5、视图百分比*/
+			/*vw、vh：v是view w是width h是height*/
+			/*注：相对于视图windows而言*/
+			.div2{
+				width: 50vw;
+				height: 30vh;
+				background-color: coral;
+			}
+			/*6、em，rem*/
+			/*em:①受文本字体大小影响*/
+			/*②当自身没有设置文本大小，继承父级元素*/
+			/*先找最近父级div，没有设置文本大小再往上找最近父级，直到html，html有默认字体16px*/
+			body{
+				font-size: 40px;
+			}
+			/*rem:root+em,此时的长度只和根元素html相关，不受其他任何元素文本大小影响*/
+			html{
+				font-size: 20px;
+			}
+			.div3{
+				width: 10rem;
+				height: 10rem;
+				background-color: brown;
+				font-size: 30px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--<div class="div1"></div>
+		<img src="img/001.png"/>-->
+		<div class="div2"></div>
+		<div><div class="div3"></div></div>
+	</body>
+</html>

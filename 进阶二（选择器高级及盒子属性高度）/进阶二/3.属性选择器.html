@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p:before {
+				content: "今天";
+				color: red;
+			}
+			
+			p:after{
+				content: "球！";
+				color: blue;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				padding: 30px;
+			}
+			/*①a[title]：有title属性的a*/
+			a[title]{
+				color:orange;
+			}
+			/*②a[title="HTML"]:有属性title为HTML的a*/
+			a[title="HTML"]{
+				color: red;
+			}
+			
+			/*③a[title ^="C"]:a的属性值是以“C”开头*/
+			a[title ^="C"]{
+				color: brown;
+			}
+			
+			/*④a[title $="L"]:a的title属性值是以“L”结尾*/
+			a[title $="L"]{
+				color: beige;
+			}
+			
+			/*⑤a[title *="S"]:a的title属性值中包含字母“S”*/
+			a[title *="S"]{
+				color: yellow;
+			}
+			
+			/*⑥a:not([title]):有title属性a的反面*/
+			a:not([title]){
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>张三爱吃球</p>
+		<div>
+			<a href="" title="HTML">①</a>
+			<a href="" title="CSS">②</a>
+			<a href="" title="JS">③</a>
+			<a href="" title="HTML" name="HTML">④</a>
+			<a href="">⑤</a>
+			<a href="">⑥</a>
+			<a href="">⑦</a>
+		</div>
+	</body>
+
+</html>

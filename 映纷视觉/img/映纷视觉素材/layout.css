@@ -1,0 +1,138 @@
+*{margin: 0;padding: 0}
+html{background: #f2f2f2;/*height: 100%;overflow: hidden;*/}
+body{font-family: "微软雅黑";font-size: 100%;color: #ADADAD}
+ul{list-style: none;}
+img{border:none;}
+/*li{float: left;}*/
+.wrap{ position: relative; width:100%;/*overflow: hidden;*/min-width: 320px;}
+.center{
+	width: 75%;margin: 0px auto;
+	position: relative;margin-top: 130px;
+	min-width: 640px;overflow: hidden;_width:800px;
+	max-width: 1200px;
+	
+}
+.head_wrap{
+	position: fixed;
+	width: 100%;
+	z-index: 222;
+	height: 92px;
+	top: 0;
+ 	_position:absolute; 
+ 	_margin-top: 0; 
+ 	_top:expression(documentElement.scrollTop);
+}
+.head{
+	vertical-align: top;
+	background: rgb(0,0,0);height: 75px;width:100%;opacity: 0.75;
+	filter:alpha(opacity=75);
+	padding-top: 15px;position: relative;
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+	text-align: center;
+	padding-bottom: 10px;
+}
+/*头部*/
+.logo{
+	height: 44px;
+	width: 136px;
+	/*margin: 0px auto;*/
+}
+.bar{
+	position: absolute;
+	color: #8e8e8e;
+	font-size: 0.9em;
+	bottom: 5px;
+	font-family: HUM521L;
+	width: 100%;
+}
+.nav{
+	width: 80%;
+	text-align: center;	
+	margin:auto;
+	min-width: 320px;
+}
+.nav a{
+	/*float: left;*/
+	/*display: inline-block;*/
+	/*margin: 0 5% 0 5%;*/
+	color: #898989;
+	text-decoration: none;
+	margin-left: 11%;
+}
+.nav a:hover{
+	color: white;
+}
+.nav .firstNav{
+	margin-left: 0;
+}
+.nav .active{
+	color: #ffffff;
+}
+.slider{
+	position: absolute;
+	width: 20px;
+	top: 100px;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+.footer{
+	background: #e0e0e0;position:relative;
+	width: 100%;margin-top: 40px;padding-top: 10px;
+	padding-bottom: 10px;
+	text-shadow:1px 1px 1px white;
+	color: #666666;
+	overflow: hidden;
+}
+.footer_left,.footer_right{width: 49%;display: inline-block;}
+.footer_left{vertical-align: top;float: left;}
+.footer_right{border-left:1px #bcbcbc solid;float: right;}
+.link{float: right;height: 50px;}
+.link a{width: 30px;float: left;margin-left: 6px;}
+.link1{
+	margin-left: 0;
+}
+.link a img{
+	width: 100%;
+}
+
+.contact{margin-left: 3%;font-size: 0.75em}
+.contact_logo{
+	width: 143px;
+	margin-bottom: 10px;
+}
+.contact_logo img{
+	width: 100%;
+}
+.contact p{
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 640px){
+body{font-size: 86%}
+.center{width:96%;margin-top:90px;min-width: 310px;}
+.head_wrap{height: 78px}
+.head{height: 65px;padding-bottom: 0;padding-top: 5px;}
+.logo{width: 110px;height: 32px}
+
+.slider{width: 13px;top: 70px;}
+.link a{margin-left: 5px}
+.contact{margin-left: 10px}
+.contact_logo{width: 120px;}
+.contact p{margin-bottom: 3px;}
+.footer{margin-top: 20px;}
+.work_title{font-size: 24px;}
+}
+@media screen and (max-width: 480px){
+.link{margin-right: 0px}
+.contact{margin-left: 2px}
+.work_title{font-size: 16px;}
+}
+
+
+@font-face{
+	 font-family: "HUM521L";
+	 src: url(../font/HUM521L.TTF) format('truetype');
+	 font-weight: normal;
+	 font-style: normal;
+}
+

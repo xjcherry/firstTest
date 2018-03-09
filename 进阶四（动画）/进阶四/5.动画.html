@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+		section{
+			width: 1000px;
+			margin: 300px auto;
+		}
+			.div1{
+			width: 50px;
+			height: 50px;
+			background-color: blue;
+			border-radius: 50%;	
+			}
+			/*动画相关属性*/
+			.div1{
+				/*动画名：此值为key，但可以随意命名*/
+				animation-name: QiuQiu;
+				/*动画持续时间*/
+				animation-duration: 3.5s;
+				/*动画延迟执行时间*/
+				animation-delay: 1s;
+				/*动画初始状态：默认running*/
+				animation-play-state: paused;
+				/*运动轨迹*/
+				animation-timing-function:cubic-bezier(0.92,1.52,0.17,-0.42);
+				/*运动结束停留位置:forwards(终点) 默认backwards（起点）*/
+				animation-fill-mode: forwards;
+				/*运动重复次数:任意数字或无限次（infinite）*/
+				animation-iteration-count: 3;
+				/*运动方向：默认normal 来回运动alternate 终点开始第一次运动，并且来回运动alternate-reverse*/
+				animation-direction: alternate;
+			}
+			/*keyframes：动画过程体，通过动画名key找到相应的动画配置*/
+			@-webkit-keyframes QiuQiu{
+				/*开始点：不进行处理的情况下，默认是原始布局状态*/
+				/*当进行处理时，开始状态则为设置的状态，但不影响原始状态*/
+				from{
+					/*margin-left: 450px;*/
+				}
+				/*结束点：必须要进行处理*/
+				to{
+					margin-left: 950px;
+				}
+			}
+			.div2{
+				width: 50px;
+				height: 50px;
+				background-color: red;
+				border-radius: 50%;
+				position: absolute;
+				top: 300px;
+				left: 1250px;
+				animation: qiu2 3.5s 1s paused cubic-bezier(0.92,1.52,0.17,-0.42)  5 ;
+			}
+			@-webkit-keyframes qiu2{
+				from{
+					/*margin-left: 1250px;*/
+					}
+				to{
+					margin-left: -950px;
+					}
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<div class="div1" onclick="this.style.animationPlayState='running';"></div>
+			<div class="div2" onclick="this.style.animationPlayState='running';"></div>
+		</section>
+	</body>
+
+</html>

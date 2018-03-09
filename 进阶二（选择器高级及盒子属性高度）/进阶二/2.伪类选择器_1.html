@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		section{
+			width: 90vw;
+			margin: 0 auto;
+		}
+			p{
+			width: 32%;
+			height: 200px;
+			margin-left: 1%;
+			margin-bottom: 20px;
+			background-color: gray;
+			float: left;	
+			}
+			/*①p:nth-child()*/
+			/*注：1、先索引所有在第六位的子集元素（之前有五个兄弟）*/
+			/*2、判断其选择器和所规定的选择器匹配与否，匹配成功则更改样式*/
+			/*小1*/
+			/*p:nth-child(6){
+				background-color: orange;
+			}*/
+			/*小2*/
+			/*2n代表偶数，2n+1代表奇数*/
+			/*p:nth-child(3n){
+				background-color:red;
+			}*/
+			/*小3*/
+			/*3n代表3的倍位数（注：3×3布局的中间列可以用3n-1/3n+2表示）*/
+			/*p:nth-child(3n){
+				background-color: yellow;
+			}*/
+			
+			/*②p：first-child：第一个位置*/
+			/*p:first-child{
+				background-color: tan;
+			}*/
+			
+			/*③p：nth-last-child（）：从后开始索引*/
+			/*p:nth-last-child(3n){
+				background-color: yellowgreen;
+			}*/
+			
+			/*④p：nth-of-type（）*/
+			/*注：1、用法同nth-child*/
+			/*2、不同于其只索引type为p的元素，元素的位置是同类型中的第几位*/
+			/*p:nth-of-type(3n){
+				background-color: greenyellow;
+			}*/
+			/*⑤p：first-of-type*/
+			/*注：第一个为p的元素，该元素在不在第一个child无所谓*/
+			/*p:first-of-type{
+				background-color: gold;
+			}*/
+			
+			/*⑥p：last-of-type*/
+			/*p:last-of-type{
+				background-color: aqua;
+			}*/
+			
+			/*⑦p:only-child*/
+			/*注：元素必须为p，且其没有任何兄弟标签*/
+			/*p:only-child{
+				background-color: beige;
+			}*/
+			/*⑧p：only-of-type*/
+			/*注：根据type判断元素类型（如：p或div），具体该元素可以通过class、或其他方式查找，但不影响type结果（p还是p）*/
+			/*其可以有其他类型的元素兄弟，但不能有其他任何p元素兄弟*/
+			.p:only-of-type{
+				background-color: darkcyan;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<p class="p"></p>
+			<!--小1<div></div>-->
+			<span></span>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			
+		</section>
+	</body>
+</html>

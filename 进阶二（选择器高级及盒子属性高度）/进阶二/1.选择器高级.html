@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*①子代选择器*/
+			/*注：作用于最后的那个对象；只查到一层子集，不涉及子集的子集*/
+			
+			div>section>p {
+				color: orange;
+			}
+			/*②相邻选择器*/
+			/*注：作用于最后的对象；p+span代表p（后）相邻的span，中间不可以有其他元素*/
+			
+			p+span {
+				color: cyan;
+			}
+			
+			/*③兄弟选择器*/
+			/*注：作用于span（0~n）对象；p~span代表p（后）的span兄弟们，中间可以有其他的元素*/
+			p~span {
+				color: blue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--①子代选择器-->
+		<div>
+			<p>①div>p</p>
+		</div>
+		<div>
+			<section>
+				<p>②div>p</p>
+				<div>
+					<p>③div>div>p</p>
+				</div>
+				<p>④div>p</p>
+			</section>
+		</div>
+		<!--②相邻选择器-->
+		<div>
+			<span>我是span①</span>
+			<p>你是p</p>
+			<span>我是span②</span>
+			<span>我是span③</span>
+		</div>
+		<!--③兄弟标签-->
+		<div>
+			<span>兄弟①</span>
+			<p>你是p</p>
+			<span>兄弟②</span>
+			<div>你是p</div>
+			<span>兄弟③</span>
+			<span>兄弟④</span>
+		</div>
+	</body>
+
+</html>

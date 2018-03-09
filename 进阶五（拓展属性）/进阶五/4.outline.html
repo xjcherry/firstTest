@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				
+			}
+			div:nth-of-type(1){
+				/*宽度*/
+				/*outline-width:10px ;*/
+				/*样式*/
+				/*outline-style: solid;*/
+				/*颜色*/
+				/*outline-color: yellow;*/
+				background-color: red;
+				outline:10px solid yellow ;
+				/*给一个像素值，代表外偏移量*/
+				outline-offset: 10px;
+				border: 10px dashed orange;
+			}
+			div:nth-child(3){
+				background-color: green;
+				/*outline不影响布局，原因不对盒子模型产生影响*/
+				/*位置在盒子的border外显示，没有border情况下在content外显示*/
+				/*当outline与兄弟标签的border或content重叠时，outline层次更高*/
+				outline: 5px dotted greenyellow;
+			}
+			div:last-child{
+				background-color: pink;
+			}
+			/*div:last-of-type:active{
+				outline: 5px dotted black;
+			}*/
+			/*：focus代表成为焦点时该遵循的css样式*/
+			div:last-of-type:hover{
+				outline: 5px dotted black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="text" "/>
+		<div><button>百度</button></div>
+		<div></div>
+		<!--普通标签给tabindex全局属性，可以允许其获得焦点（成为第一响应者）-->
+		
+		<div tabindex="-1"></div>
+		
+	</body>
+
+</html>

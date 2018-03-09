@@ -1,0 +1,27 @@
+.div1{
+	width: 1200px;
+	/*height: 135px;*/
+	margin: 0 auto;
+	margin-top: 50px;
+	text-indent: 2em;
+	border-bottom: 1px solid rgb(232,232,232);
+	border-top:1px solid rgb(232,232,232) ;
+	text-align: left;
+	line-height: 1.5em;
+	font-family: STKaiti;
+	font-size: 1.2em;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	color: rgb(102,102,102);	
+}
+@media only screen and (min-width: 1215px) and (max-width: 1367px) {
+	.div1{
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width:1215px ) {
+	.div1{
+		width: 75%;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,102 @@
+.section {
+	width: 1050px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.section1{
+	width: 320px;
+	padding: 10px;
+	background-color: white;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	float: left;
+}
+
+.section .img1 {
+	width: 320px;	
+}
+.section1 h3{
+	margin: 0;
+	margin-top: 10px;
+}
+.section1_1{
+	margin-top: 5px;
+	overflow: hidden;
+	line-height: 30px;
+}
+.section1_1 .img2{
+	width: 25px;
+	margin-top:-2px;
+	float: left;
+	margin-top: 5px;
+}
+.section1_1 .div1,.section1_1 .div2{
+	display: inline-block;
+	height: 25px;
+	float: left;
+	line-height: 30px;
+	color: #CDCCCD;
+}
+.section1_1 .div1{
+	margin-left: 5px;
+}
+.section1_1 .div2{
+	float: right;
+}
+.section1_2{
+	overflow: hidden;
+}
+.section1_2 .div1,.section1_2 .div2,.section1_2 .div3{
+	width: 40px;
+	height: 20px;
+	float: left;	
+	border: 1px solid #E9E9E9;	
+	border-radius: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin-right: 10px;
+	margin-top: 10px;
+	background-color: #F8F8F8;
+}
+.div4{
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin-top: 10px;
+	background-image: url(../img/like.jpg);
+	background-repeat: no-repeat;
+	background-size: 25px;
+}
+.div4:hover{
+	background-image:url(../img/like2.jpg);	
+}
+	
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+	.section {
+		width: 850px;
+		
+	}
+	.section .img1 {
+		width: 250px;
+	}
+	.section1{
+		width: 250px;
+	}
+	
+}
+
+@media only screen and (max-width: 800px) {
+	.section {
+		width: 630px;
+		
+	}
+	.section .img1 {
+		width: 285px;
+	}
+	.section1{
+		width: 285px;
+	}
+}
+

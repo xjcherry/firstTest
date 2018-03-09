@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				
+			}
+			.box{
+				/*规定父级标签为弹性盒模型*/
+				/*父级标签会被平分10等分*/
+				width: 100%;
+				height: 100vh;
+				display: -webkit-box;
+				-webkit-box-direction: reverse;
+				-webkit-box-orient: horizontal;
+			}
+			.box div{
+				height: 100px;
+			}
+			.flex1{	
+				background-color: red;
+				/*子级占父级的十分之几（不能为小数，且总和不能超过十份）*/
+				/*当总和不超过10，子级所占比例为自身数/总和数*/
+				-webkit-box-flex: 2;
+			}
+			.flex2{
+				background-color: yellow;
+				-webkit-box-flex: 1;
+			}
+			.flex3{
+				background-color: orange;
+				-webkit-box-flex: 4;
+			}
+			.flex4{
+				background-color: blue;
+				-webkit-box-flex: 2;
+			}
+			.flex5{
+				background-color: tan;
+				-webkit-box-flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="flex1"></div>
+			<div class="flex2"></div>
+			<div class="flex3"></div>
+			<div class="flex4"></div>
+			<div class="flex5"></div>
+		</div>
+	</body>
+</html>

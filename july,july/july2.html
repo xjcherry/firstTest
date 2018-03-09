@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,
+			html {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			body>content>div {
+				width: 100%;
+				height: 100%;
+			}
+			
+			body>content>div {
+				/*overflow: hidden;*/
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			a {
+				display: block;
+				text-decoration: none;
+			}
+			
+			span {
+				display: inline-block;
+			}
+			
+			.div1>video,
+			.div2>video,
+			.div4>video {
+				width: 1920px;
+			}
+			
+			.div3>img,
+			.div5>img {
+				width: 1920px;
+			}
+			
+			.div1,
+			.div2,
+			.div3,
+			.div4,
+			.div5 {
+				position: relative;
+				width: 100vw;
+				height: 100vh;
+				overflow:hidden ;
+			}
+			
+			.div1>div {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: -webkit-linear-gradient(right, rgba(175, 108, 177, 0.8), rgba(144, 96, 148, 0.8), rgba(151, 114, 158, 0.8));
+			}
+			
+			.div2>div {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: -webkit-linear-gradient(right, rgba(44, 131, 131, 0.8), rgba(54, 122, 121, 0.8));
+			}
+			
+			.div3>div {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: -webkit-linear-gradient(right bottom, rgba(218, 176, 220, 0.8), rgba(199, 206, 228, 0.8));
+			}
+			
+			.div4>div {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: -webkit-linear-gradient(left top, rgba(66, 119, 172, 0.8), rgba(26, 151, 140, 0.8));
+			}
+			
+			.div5>div {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: -webkit-linear-gradient(120deg, rgba(233, 129, 107, 0.8), rgba(231, 197, 130, 0.8));
+			}
+			
+			.nav {
+				width: 96%;
+				height: 87px;
+				position: fixed;
+				top: 18px;
+				left: 2%;
+				right: 2%;
+				z-index: 1;
+			}
+			.ad{
+				font-family: "july-july";
+				font-size: 85px;
+				color: white;
+				float: left;
+				font-weight: lighter;
+			}
+			.ad:hover  {
+				color: RGB(234, 229, 236);			
+			}
+			.nav>.dian{
+				width: 85px;
+				height: 85px;
+				background-image: url(img/003.png);
+				background-repeat: no-repeat;
+				float: right;
+			}
+			.dian:hover{
+				background-image: url(img/004.png);
+				background-repeat: no-repeat;
+			}
+			.div1>div>div,
+			.div2>div>div,
+			.div3>div>div,
+			.div4>div>div,
+			.div5>div>div {
+				width: 46%;
+				height: 50%;
+				position: absolute;
+				top: 25%;
+				left: 30%;
+				text-align: center;
+			}			
+			.span1,
+			.span2,
+			.span3,
+			.span4,
+			.span5 {
+				color: white;
+				font-size: 20px;
+				height: 50px;
+				width: 200px;
+				border: 1px solid white;
+				line-height: 50px;
+				letter-spacing: 5px;
+			}		
+			.span1:hover {
+				background-color: white;
+				color: purple;
+			}
+			
+			.span2:hover {
+				background-color: white;
+				color: RGB(72, 137, 135);
+			}
+			
+			.span3:hover {
+				background-color: white;
+				color: RGB(213, 184, 221);
+			}
+			
+			.span4:hover {
+				background-color: white;
+				color: RGB(39, 145, 143);
+			}
+			
+			.span5:hover {
+				background-color: white;
+				color: RGB(234, 175, 111);
+			}
+			
+			.box>div:nth-child(1) {
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				position: fixed;
+				top: 40%;
+				right: 2%;
+				z-index: 10;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			
+			.box>div:nth-child(2) {
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				position: fixed;
+				top: 45%;
+				right: 2%;
+				z-index: 10;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			
+			.box>div:nth-child(3) {
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				position: fixed;
+				top: 50%;
+				right: 2%;
+				z-index: 10;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			
+			.box>div:nth-child(4) {
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				position: fixed;
+				top: 55%;
+				right: 2%;
+				z-index: 10;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			
+			.box>div:nth-child(5) {
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				position: fixed;
+				top: 60%;
+				right: 2%;
+				z-index: 10;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			
+			.box {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;				
+			}
+			
+			.content {
+				width: 100%;
+				height: 700%;
+				transition: 1s;	
+				margin-top: -200vh;	
+				
+			}
+			.box>div:nth-child(1):hover,.box>div:nth-child(2):hover,.box>div:nth-child(3):hover,.box>div:nth-child(4):hover,.box>div:nth-child(5):hover{
+				width: 16px;
+				height: 16px;
+				background-color: transparent;
+				border: 2px solid white;
+				border-radius: 12px;				
+			}
+			.div6,.div7{
+				width: 100vw;
+				height: 100vh;
+			}
+			.div6{
+				background-color: RGB(137, 77, 137);
+				position:relative ;
+				z-index: 3;
+			}
+			.div7{
+				background-color: RGB(149, 114, 157);
+			}
+			.cha{
+				width: 30px;
+				height: 30px;
+				background-image: url(img/005.png);
+				position: fixed;
+				top: 18px;
+				right: 5vw;
+				z-index: 20;
+				display: none;
+			}
+			.div6>div:nth-child(1),.div6>div:nth-child(2),.div6>div:nth-child(3){
+				width: 100vw;
+				height: 33.33vh;
+				background-color: rgb(175,108,177);
+				color:white;
+				font-weight: bolder ;
+				font-size: 80px;
+				text-align: center;
+				line-height: 33.33vh;
+			}
+			.div6>div:nth-child(1):hover,.div6>div:nth-child(2):hover,.div6>div:nth-child(3):hover{
+				color: rgb(175,108,177);
+				background-color: white;
+			}
+			@font-face {
+				font-family:"july-july";
+				src: url("font/july-july.woff");
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div onclick="document.getElementById('content').style.marginTop = '-200vh';"></div>
+			<div onclick="document.getElementById('content').style.marginTop = '-300vh';"></div>
+			<div onclick="document.getElementById('content').style.marginTop = '-400vh';"></div>
+			<div onclick="document.getElementById('content').style.marginTop = '-500vh';"></div>
+			<div onclick="document.getElementById('content').style.marginTop = '-600vh';"></div>
+			<div id="cha" class="cha" onclick="document.getElementById('content').style.marginTop = '-200vh';this.style.display = 'none';"></div>
+			
+			<div class="nav">
+				<div class="ad">c</div>
+				
+				<div class="dian" onclick="document.getElementById('content').style.marginTop = '0';document.getElementById('cha').style.display='block';"></div>
+			</div>
+
+			<div class="content" id="content">
+				<div class="div6">
+					<div>WORK</div>
+					<div>ABOUT</div>
+					<div>CONTACT</div>
+				</div>
+				<div class="div7">
+				</div>
+				<div class="div1">
+					<video src="动画项目/001.mp4" autoplay="autoplay" loop="loop"></video>
+					<div>
+						<div class="middle1">
+							<a href=""><span style="font-size: 20px;margin-top: 20px;color: white;letter-spacing: 5px;">Skrødstrup Efterskole</span></a>
+							<a href="">
+								<h2 style="font-size: 70px;color: white;">A visually bold take on an educational institution’s website</h2></a>
+							<a href=""><span class="span1">View case</span></a>
+						</div>
+					</div>
+				</div>
+				<!--<a href="" name="div2"></a>-->
+				<div class="div2">
+					<video src="动画项目/002.mp4" autoplay="autoplay" loop="loop"></video>
+					<div>
+						<div class="middle2">
+							<a href=""><span style="font-size: 20px;margin-top: 20px;color: white;letter-spacing: 5px;">Høng Efterskole</span></a>
+							<a href="">
+								<h2 style="font-size: 70px;color: white;">A colorful and playful boarding school website</h2></a>
+							<a href=""><span class="span2">View case</span></a>
+						</div>
+					</div>
+				</div>
+				<!--<a href="" name="div3"></a>-->
+				<div class="div3">
+					<img src="动画项目/003.jpg" />
+					<div>
+						<div class="middle3">
+							<a href=""><span style="font-size: 20px;margin-top: 20px;color: white;letter-spacing: 5px;">Compliments</span></a>
+							<a href="">
+								<h2 style="font-size: 70px;color: white;">Creating an online webshop - making home home</h2></a>
+							<a href=""><span class="span3">View case</span></a>
+						</div>
+					</div>
+				</div>
+				<!--<a href="" name="div4"></a>-->
+				<div class="div4">
+					<video src="动画项目/004.mp4" autoplay="autoplay" loop="loop"></video>
+					<div>
+						<div class="middle4">
+							<a href=""><span style="font-size: 20px;margin-top: 20px;color: white;letter-spacing: 5px;">JOSPEL Project</span></a>
+							<a href="">
+								<h2 style="font-size: 70px;color: white;">A novel energy efficient EV climate system</h2></a>
+							<a href=""><span class="span4">View case</span></a>
+						</div>
+					</div>
+				</div>
+				<!--<a href="" name="div5"></a>-->
+				<div class="div5">
+					<img src="动画项目/005.jpg" />
+					<div>
+						<div class="middle5">
+							<a href=""><span style="font-size: 20px;margin-top: 20px;color: white;letter-spacing: 5px;">Charles</span></a>
+							<a href="">
+								<h2 style="font-size: 70px;color: white;">Creating a website for a Danish clothing brand</h2></a>
+							<a href=""><span class="span5">View case</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
